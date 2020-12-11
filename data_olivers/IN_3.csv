@@ -1,0 +1,36 @@
+usager;usage;ressource
+government scheme;hands out;inorganic fertiliser
+NGO;hands out;inorganic fertiliser
+open market;sells;inorganic fertiliser
+community;includes;farmer
+farmer;receives;inorganic fertiliser
+farmer;buys;inorganic fertiliser
+farmer;includes;non cattle owner
+farmer;includes;cattle owner
+farmer;degrades;organic carbon
+landscape;includes;forested landscape
+landscape;includes;cropping land
+landscape;includes;fallow land
+landscape;includes;grazing land
+government scheme;formulates;policy
+policy;shape;landscape
+forested landscape;provides;leaf litter
+compost;contains;leaf litter
+non cattle owner;extracts;leaf litter
+non cattle owner;generates;compost
+compost;is applied;cropping land
+compost;contains;organic carbon
+cattle owner;own;cattle
+cattle owner;grazes;grazing land
+cattle owner;generates;manure
+manure;is applied;cropping land
+manure;contains;organic carbon
+cropping land;contains;organic carbon
+fallow land;contains;organic carbon
+grazing land;contains ;organic carbon
+forested landscape;contains;organic carbon
+local leadershio;decides;landuse guideline
+landuse guideline;determines;fallow land
+landuse guideline;determines;cropping land
+landuse guideline;determines;grazing land
+landuse guideline;determines;landscape

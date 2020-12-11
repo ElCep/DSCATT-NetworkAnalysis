@@ -1,0 +1,47 @@
+usager;usage;ressource
+private sector;supplies;input
+input;includes;fertiliser
+private sector;transmits;technology and knowledge
+research partner;comes up wih;technology and knowledge
+development organisation;transmits;technology and knowledge
+agritex;transmits;technology and knowledge
+farmer;uses;technology and knowledge
+farmer;uses;fertiliser
+government policy;subisidises;fertiliser
+government policy;influences;farmer
+farmer;uses;leaf litter grass
+communal grazing area;generates;leaf litter grass
+cattle;grazes;communal grazing area
+farmer;includes;resource endowed
+farmer;includes;resource constrained
+resource constrained;uses less;fertiliser
+resource endowed;uses more;fertiliser
+resource endowed;owns;cattle
+cattle;generates;manure
+resource endowed;has access to;manure
+manure;contains;organic matter
+cropping land;contains;organic matter
+manure;is added to;cropping land
+leaf litter grass;contains;organic matter
+leaf litter grass;is added to ;cropping land
+resource endowed;owns;fertile land
+resource consrained;owns;degraded land
+cropping land;includes;fertile land
+cropping land;includes;degraded land
+resource endowed;cultivates more;cropping land
+resource constrained;cultivates less;cropping land
+cropping land;grows;output
+resource endowed;grows more;output
+resource contrained;grows less;output
+resource endowed;invests in;cash crop
+government policy;determines;output
+market;buys;output
+output;contains;crop residue
+cattle;eats;crop residue
+crop residue;contains;organic matter
+crop residue;returns to;cropping land
+market;generates;revenue
+farmer;spends;revenue
+organic matter;provides;nutrient
+fertiliser;provides;nutrient
+nutrient;sustains;output

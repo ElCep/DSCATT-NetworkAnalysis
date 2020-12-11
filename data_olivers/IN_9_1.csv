@@ -1,0 +1,39 @@
+usager;usage;ressource
+research institute;convinces;farmer
+NGO;advises;farmer
+agritex;informs;farmer
+farmer;negotiates;merchant
+merchant ;supplies;input
+farmer;shares with;farmer
+farmer;buys;input
+miombo;contains;thatch grass
+miombo;contains;wood
+miombo;contains;fruit tree
+fruit tree;generates;fruit
+farmer;extracts;wood
+farmer;extracts;fruit
+farmer;extracts;thatch grass
+farmer;protects;fruit tree
+farmer;owns;livestock
+livestock;grazes;miombo
+farmer;manages;cropping land
+farmer;generates;organic waste
+organic waste;fertilises;cropping land
+livestock;grazes;cropping land
+livestock;parks;kraal
+kraal;concentrates;manure
+manure;fertilises;cropping land
+livestock;generates;meat
+market;buys;meat
+cropping land;includes;outfield
+cropping land;includes;garden
+cropping land;includes;homefield
+stream water;waters;garden
+rain water;waters;cropping land
+cropping land;generates;agricultural production
+agricultural production;contains;crop residue
+crop residue;contains;stored residue
+farmer;stores;stored residue
+crop residue;contains;abandoned residue
+livestock;eats;crop residue
+farmer;burns;crop residue

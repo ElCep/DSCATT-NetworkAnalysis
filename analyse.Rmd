@@ -1,0 +1,126 @@
+---
+title: "analyse de réseau pardi"
+author: "Delay"
+date: "31/07/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+## https://stackoverflow.com/questions/50544463/igraph-add-shape-to-edges-between-communities
+knitr::opts_chunk$set(echo = TRUE)
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(sna) #calculation Hamming distance
+library(stringr) # manip sring -> name of files for last graph
+
+set.seed(1234)
+
+v.file <- list.files("~/gitCirad/dscatt-networkanalysis/data_olivers/")
+v.file <- v.file[v.file != "final.data.csv"]
+
+my_net_list <- vector("list", length(v.file)) #create an empty list with the good size
+big.g <- NULL
+
+for(i in 1:length(v.file)){
+  data <- read.csv(paste0("~/gitCirad/dscatt-networkanalysis/data_olivers/",v.file[i]),sep = ";", header = T)
+  edges1 <- data[,c(1,3)]
+  
+  #vertex/nodes manipulation
+  vertex1 <- data.frame("label" = unique(c(as.character(data[,1]), as.character(data[,3]))))
+  vertex1$id <- row.names(vertex1)
+  # in this datafram, id must be fisrt
+  vertex1 <- vertex1[,c(2,1)]
+  
+  # Create numeric id for each edge relation 
+  edges <- left_join(edges1, vertex1, by = c("usager" = "label")) 
+  edges <- left_join(edges, vertex1, by = c("ressource" = "label"))
+  # keep id's
+  sub.edges <- edges[,3:4]
+  colnames(sub.edges) <- c("from","to")
+  
+  g1 <- graph_from_data_frame(d = sub.edges, vertices = vertex1, directed = TRUE)
+  V(g1)$name <- V(g1)$label
+  V(g1)$interview <- i ##put name of interview in the garph
+  if(i == 1){
+    big.g <- g1
+  }else{
+    big.g <- big.g + g1  
+  }
+  
+  
+  my_net_list[[i]] <- g1 #pull to created network on the list with the good index
+}
+```
+
+## Présenter un réseau 
+
+Voilà l'ensemble des grapges d'interaction produit.
+
+```{r}
+for(i in 1:length(v.file)){
+plot(my_net_list[[i]], edge.arrow.size = 0.2)  
+}
+
+plot(big.g)
+
+
+```
+
+## Distance Hamming
+
+La distance de Hamming mesure le nombre minimum de substitutions nécessaires pour changer (transformer) un "objet" mathématique (c'est-à-dire des chaînes de caractères ou des binaires) en un autre.
+
+En théorie des réseaux, elle peut donc être définie comme le nombre de connexions différentes entre deux réseaux (elle peut également être formulée pour les réseaux de taille inégale et pour les graphiques pondérés ou dirigés). Dans un cas simple où vous avez deux réseaux Erdos-Renyi (la matrice de contiguïté a 1 si la paire de nœuds est connectée et 0 sinon), la distance est mathématiquement définie comme suit :
+
+$$\frac{1}{N \times (N-1)} \sum_{1\le i \ne j\le N} | A_{ij}^{(1)} - A_{ij}^{(2)}|$$
+
+Les valeurs qui sont soustraites sont les deux matrices de contiguïté. 
+```{r}
+combinaisons <- t(as.data.frame(combn(c(1:length(v.file)),2)))
+```
+
+```{r}
+g.similatity <-  data.frame()
+for(i in 1:length(combinaisons[,1])){
+  g1 <- combinaisons[i,1]
+  g2 <- combinaisons[i,2]
+  
+  ##Cette solution vient de là : https://lists.gnu.org/archive/html/igraph-help/2008-04/msg00017.html
+  int <- graph.intersection(my_net_list[[g1]],my_net_list[[g2]])
+  n.dist <- ecount(my_net_list[[g1]])+ecount(my_net_list[[g2]])-2*ecount(int)
+  
+  g.similatity <- rbind(g.similatity, c(combinaisons[i,1], combinaisons[i,2], n.dist))
+ 
+}
+colnames(g.similatity) <- c("g1","g2","Hamming")
+g.similatity
+
+```
+
+Il ne reste plus qu'a produire une table de similarité 
+
+```{r}
+## créer une tablea de données lisible par les humains
+
+#Table des nomes avec ID
+table.names <- data.frame(ID = 1:length(v.file), name = str_extract(v.file, '.*(?=\\.csv)'))
+
+tps1 <- left_join(g.similatity, table.names, by = c("g1" = "ID"))
+tps2 <- left_join(g.similatity, table.names, by = c("g2" = "ID"))
+
+final.data <- data.frame(name1=tps1$name, name2=tps2$name, Hamming=tps2$Hamming)
+final.data[order(final.data$Hamming),]
+
+write.csv( x= final.data[order(final.data$Hamming),],file = "data_olivers/final.data.csv")
+
+```
+```{r}
+vertice.df <- unique(c(as.character(final.data$name1),as.character(final.data$name2)))
+g <- graph_from_data_frame(d = final.data, vertices = vertice.df, directed = F)
+
+m <- get.adjacency(g, attr = "Hamming", sparse = F) 
+l <- layout_with_mds(g, dist = m, dim = 2) 
+plot(g, layout = l)
+```
+

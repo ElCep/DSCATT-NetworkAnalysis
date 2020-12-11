@@ -1,0 +1,53 @@
+usager;usage;ressource
+NGO;works with;research institute
+research institute;works with;NGO
+research institute;supports;agritex
+NGO;supports;agritex
+agritex;vulgarises;technology
+research institute;generates;technology
+agrobusiness;supplies;private sector
+private sector;sells;input
+producer;buys;input
+producer;adopts;technology
+input;includes;inorganic fertiliser
+NGO;hands out;inorganic fertiliser
+producer;cultivates;agricultural land
+inorganic fertiliser;fertilises;agricultural land
+agricultural land;includes;grassland
+producer;owns;cattle
+cattle;grazes;grassland
+cattle;grazes;abandoned field
+cattle;generates;manure
+producer;produces;compost
+organic fertiliser;includes;compost
+organic fertiliser;includes;manure
+agricultural land;includes;field
+field;includes;abandoned field
+cattle;grazes;crop residue
+field;includes;outfield
+field;includes;homefield
+producer;includes;man
+producer;includes;woman
+man;manages;outfield
+woman;manages;homefield
+outfield;produces;crop
+homefield;produces;vegetable
+agricultural output;includes;vegetable
+agricultural output;includes;crop
+agricultural output;generates;crop residue
+private sector;buys;agricultural output
+private buyer;generates;on farm income
+man;works in;city
+city;generates;off farm income
+income;includes;off farm income
+income;includes;on farm income
+income;sustains;producer
+woman;hires;extra labour
+extra labour;cultivates;homefield
+organic feriliser;fertilises;homefield
+field;contains;organic matter
+organic matter;includes;crop residue
+organic matter;includes;agricultural output
+organic matter;includes;organic fertiliser
+soil microorganism;breaks down;organic matter
+agricultural output;feeds;farmer

@@ -1,0 +1,52 @@
+usager;usage;ressource
+household;includes;adult
+adult;includes;man
+adult;includes;woman
+adult;earns;off farm income
+household;includes;child
+child;includes;productive
+child;includes;unproductive
+productive;helps;producer
+household;includes;producer
+household;spends;financial resource
+financial resource;includes;off farm income
+financial resource;includes;credit
+banker;provides;credit
+financial resource;includes;farm income
+market;generates;farm income
+market;buys;meat
+market;buys;milk
+cattle;produces;meat
+cattle;produces;milk
+producer;favours;cattle
+cattle;eats;biomass
+market;buys;biomass
+soil;grows;biomass
+biomass;is;carbon
+CO2;is;carbon
+soil;contains;carbon
+biomass;requires;CO2
+biomass;requires;essential element
+essential element;includes;water
+essential element;includes;climate
+essential element;includes;nutrient
+mineral fertiliser;provides;nutrient
+market;supplies;mineral fertiliser
+soil;contains;essential element
+producer;manages;essential element
+producer;manages;soil
+producer;fosters;carbon
+household;eats;biomass
+innovation;influences;carbon
+agricultural policy;influences;carbon
+policy maker;formulates;agricultural policy
+agricultural policy;influences;producer
+researcher;proposes;agricultural policy
+policy maker;includes;high level politician
+AGRITEX;distrusts;high level politician
+researcher;works with;high level politician
+AGRITEX;distrusts;researcher
+AGRITEX;transmits;innovation
+researcher;offers;innovation
+knowledge;includes;innovation
+producer;has;knowledge

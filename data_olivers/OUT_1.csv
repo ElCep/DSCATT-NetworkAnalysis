@@ -1,0 +1,42 @@
+usager;usage;ressource
+government;supply;inorganic fertiliser
+agrodealer;sells;inorganic fertiliser
+NGO;hands out;inorganic fertiliser
+inorganic fertiliser;fertilises;homefield
+smallholder;receives;inorganic fertiliser
+smallholder;buys;inorganic fertiliser
+researcher;brings;knowledge
+agritex;transmits;knowledge
+knowledge;confirms;indigenous knowledge
+smallholder;has;indigenous knowledge
+agritex;shares with;smallholder
+smallholder;includes;resource constrained
+smallholder;includes;resource endowed
+resource constrained;borrow;implement
+resource endowed;own;implement
+resource constrained;grow less;agricultural production
+agricultural production;indludes;staple crop
+agricultural production;includes;secondary crops
+resource constrained;grow proportionally more;staple crop
+resource constrained;sells;labour
+resource endowed;buys;labour
+resource endowed;influences;government
+resource endowed;influences;NGO
+resource endowed;receives more;inorganic fertiliser
+resource endowed;own;livestock
+agricultural production;generates;crop residue
+ field;grows;agricultural production
+smallholder;consumes;agricultural production
+smallholder;manages;field
+resource constrained;retains;crop residue
+cattle;eat;crop residue
+crop residue;abandoned;field
+field;includes;homefield
+field;includes;outfield
+inorganic fertiliser;fertilises;homefield
+cattle;roams around;field
+cattle;produces;manure
+manure;fertilises;homefield
+manure;returns to;field
+resource endowed;grow proportionally more;secondary crops
+resource endowed;grows more;agricultural production

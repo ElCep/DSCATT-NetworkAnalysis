@@ -1,0 +1,28 @@
+usager;usage;ressource
+government;appoints;E.M.A
+government;formulates;guideline
+government;appoints;agritex officer
+agritex officer;supports;farmer
+government;co-opts;local leadership
+local leadership;implements;guideline
+government;supervises;G.M.B
+government;supplies;inorganic fertiliser
+farmer;uses;inorganic fertiliser
+local leadership;regulates;miombo
+guideline;controls;miombo
+miombo;generates;fodder
+miombo;generates;humus
+miombo;generates;consumer products
+livestock;eats;fodder
+humus;fertilises;land
+livestock;produces;manure
+manure;fertilises;land
+livestock;eats;crop residue
+farmer;cultivates;land
+land;produces;agricultural production
+market;buys;agricultural production
+market;generates;income
+farmer;collects ;income
+inorganic fertiliser;fertilises;land
+farmer;consumes;consumer products
+G.M.B;buys;agricultural production

@@ -1,0 +1,66 @@
+usager;usage;ressource
+farmer;includes;youth
+farmer;includes;male
+male;works in;harare
+youth;migrates to;foreign country
+farmer;includes;female
+male;sends;input
+female;receives;input
+government;supplies;input
+NGO;hands out;input
+farmer;uses;input
+local leadership;distributes;input
+farmer;owns;implement
+farmer;adopts (or not);innovation
+agritex;transmits;innovation
+agritex;represents;farmer
+researcher;works with;agritex
+researcher;works with;farmer
+local leadership;investigates;researcher
+farmer;manages;field
+local leadership;regulates;field
+farmer;includes;non cattle owner
+farmer;includes;cattle owner
+cattle owner;owns;cattle
+cattle;roams around;field
+cattle;grazes;grazing land
+grazing land;includes;forest
+grazing land;includes;mountain
+forest;generates;leaf litter
+moutain;generates;leaf litter
+non cattle owner;uses;leaf litter
+cattle ;produce;manure
+non cattle owner;buy;manure
+cattle owner;sell;manure
+field;includes;outfield
+field;includes;homestead
+field;includes;garden
+input;includes;inorganic fertiliser
+inorganic fertiliser;fertilises;garden
+inorganic fertiliser;fertilises;homestead
+leaf litter;fertilises;homestead
+leaf litter;fertilises;garden
+manure;fertilises;homestead
+manure;fertilises;garden
+outfield;grows;traditional crop
+homestead;produces;traditional crop
+outfield;produces;traditional crop
+garden;produces;vegetable
+agricultural production;includes;traditional crop
+agricultural production;includes;vegetable
+agricultural production;contains;crop residue
+cattle;eats;crop residue
+crop residue;includes;abandoned crop residue
+crop residue;includes;stored crop residue
+farmer;stores;crop residue
+agricultural production;includes;surplus
+harare market;buys;surplus
+harare market;generates;revenue
+field;contains;SOC
+manure;increases;SOC
+leaf litter;increases;SOC
+soil microorganism;decomposes;SOC
+soil microorganism;mineralises;plant accessible nutrient
+SOC;releases;plant accessible nutrient
+plant accessible nutrient;nourishes;agricultural production
+farmer;consumes;agricultural production

@@ -1,0 +1,50 @@
+usager;usage;ressource
+farmer;exploits;miombo
+livestock;graze;miombo
+farmer;owns;livestock
+farmer;pays;plougher
+plougher;ploughs;cropping land
+cropping land;generates;agricultural production
+agricultural production;is;biomass
+biomass;includes;upper ground biomass
+upper ground biomass;includes;crop residue
+crop residue;includes;stored crop residue
+crop residue;includes;abandoned crop residue
+farmer;stores;stored crop residue
+farmer;burns;abandoned crop residue
+upper ground biomass;includes;grain
+market;buys;grain
+biomass;includes;below ground biomass
+below ground biomass;stimulates;soil micro organism
+soil micro organism;decomposes;below ground biomass
+below ground biomass;generates;SOC
+SOC;feeds;soil micro organism
+soil micro organism;mineralises;SOC
+farmer;applies;input
+input;contains;herbicide
+herbicide;limits;biomass
+fertiliser;boosts;biomass
+fertiliser;boosts;soil micro organism
+input;contains;fertiliser
+input;contains;pesticide
+pesticide;affects;soil micro organism
+input;contains;lime
+lime;favors;soil micro organism
+fertiliser;includes;thermite mound
+thermite mound;provides;clay
+clay;stabilises;SOC
+fertiliser;includes;manure
+livestock;generates;manure
+SOC;includes;POM
+SOC;includes;MAOM
+Clay;stabilises;MAOM
+soil micro organism;generates;SOC
+climate;includes;temperature
+climate;includes;rain
+temperature;affects;SOC
+rain;increases;agricultural production
+rain;decomposes;biomass
+rain;favors;SOC
+rain;removes;POM
+rain;leaches;input
+plougher;homogenises;SOC

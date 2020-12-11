@@ -1,0 +1,52 @@
+usager;usage;ressource
+government;writes;law
+government;controls;EMA
+government;controls;forest commission
+EMA;implements;law
+forest commission;implements;law
+police;enforces;law
+state local institution;represents;government
+state local institutions;includes;ward councillor
+ward councillor;commands;police
+police;sanctions;communal farmer
+state local institution;undermines;traditional local institution
+traditional local institution;includes;district chief
+district chief;heads;village headman
+village headman;implements;traditional law
+resource;includes;forested landscape
+resource;includes;cultivated field
+resource;includes;grassland
+traditional law;regulates use;grassland
+traditional law;regulates use;cultivated field
+traditional law;govern;restricted access forest
+forested landscape;includes;open access forest
+forested landscape;includes;restricted access forest
+communal farmer;depreciates;resource
+communal farmer;includes;whistleblower
+communal farmer;includes;group leader
+whilstleblower;observes;communal farmer
+group leader;influences;communal farmer
+whilstleblower;reports to;village headman
+village headman;draws support;group leader
+group leader;accepts or not;traditional law
+communal farmer;cannot afford;inorganic fertiliser
+communal farmer;cultivates;cultivated field
+communal farmer;includes;cattle owner
+cattle owner;extracts;dung
+kraal;generates;dung
+cattle owner;owns;cattle
+cattle;parks;kraal
+cattle;grazes;grassland
+cattle;grazes;cultivated field
+cattle;grazes;forested landscape
+communal farmer;formulates;informal rule
+informal rule;governs;cultivated field
+informal rule;governs;grassland
+communal farmer;includes;non cattle owner
+non cattle owner;extracts;forest compost
+forest compost;fertilises;cultivated field
+communal farmer;extracts;timber and non timber product
+forested landscape;generates;forest compost
+forested landscape;generates;timber and non timber product
+dung;fertilises;cultivated field
+law;regulates access;forested landscape

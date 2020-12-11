@@ -1,0 +1,33 @@
+usager;usage;ressource
+miombo;includes;tree
+tree;pumps;nutrient
+nutrient;nourish;herbaceous plant
+cattle;graze;miombo
+cattle;eat;herbaceous plant
+cattle;produce;manure
+farmer;collects;manure
+farmer;owns;cattle
+farmer;cultivates;protected homefield
+protected homefield;produces;agricultural production
+agricultural production;contains;crop residue
+cattle;eats;crop residue
+farmer;picks;crop residue
+farmer;produces;organic waste
+organic waste;applied to;protected homefield
+nutrient;replenish;protected homefield
+manure;applied to;protected homefield
+farmer;degrades;miombo
+farmer;burns;woodfuel
+miombo;contains;woodfuel
+organic matter;contains;crop residue
+organic matter;contains;tree
+organic matter;contains;herbaceous plant
+organic matter;contains;manure
+organic matter;contains ;agricultural production
+organic matter;contains;organic waste
+organic matter;contains;nutrient
+farmer;buys;input
+merchant;sells;input
+agritex;supports;farmer
+farmer;spends;off farm income
+migrant;generates;off farm income

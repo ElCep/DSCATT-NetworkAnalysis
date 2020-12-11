@@ -1,0 +1,38 @@
+usager;usage;ressource
+agritex;transfers;innovation
+researcher;offers;innovation
+researcher;dialogues;farmer
+farmer;dialogues;researcher
+agritex;counsels;farmer
+farmer;adheres;cooperative
+cooperative;lobby;local institution
+local instituion;subsidises;inorganic fertiliser
+NGO;supplies;inorganic fertiliser
+merchant;sells;inorganic fertiliser
+farmer;manipulate;inorganic fertiliser
+inorganic fertiliser;fertilises;cultivated field
+farmer;own;cultivated field
+farmer;collects;manure
+manure;fertilises;cultivated field
+farmer;extracts;humus
+farmer;conducts;cattle
+cattle;generates;manure
+cattle;eats;biomass
+miombo grazing land;produces;biomass
+biomass;increases;SOC
+miombo grazing land;generates;humus
+manure;increases;SOC
+manure;increases;SOC
+cultivated field;contains;SOC
+cultivated field;grows;agricultural production
+agricultural production;produces;crop residue
+crop residue;feeds;cattle
+crop residue;increases;SOC
+farmer;consumes;agricultural production
+rain;waters;cultivated field
+city consumer;buys;agricultural production
+city consumer;generates;revenue
+migrant;sends;remittance
+financial capital;includes;remittance
+financial capital;includes;revenue
+farmer;spends;financial capital 

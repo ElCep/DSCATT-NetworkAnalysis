@@ -1,0 +1,46 @@
+usager;usage;ressource
+agritex ;supports;communal farmer
+communal farmer;uses;inorganic fertiliser
+private entreprise;supplies;inorganic fertiliser
+NGO;supplies;inorganic fertiliser
+communal farmer;cultivates;land
+communal farmer;includes;male
+communal farmer;includes;female
+male;leaves;city
+communal farmer;clears;miombo
+livestock;grazes;miombo
+communal farmer;owns;livestock
+land;includes;outfield
+land;includes;homefield
+land;includes;garden
+communal farmer;retains;fruit tree
+miombo;contains;fruit tree
+fruit tree;fertilises;land
+male;cultivates;outfield
+male;cultivates;homefield
+female;cultivates;homefield
+female;cultivates;garden
+outfield;grows;crop
+outfield;grows;legume
+homefield;grows;crop
+homefield;grows;legume
+homefield;grows;vegetable
+garden;grows;legume
+garden;grows;vegetable
+agricultural production;includes;vegetable
+agricultural production;includes;legume
+agricultural production;includes;crop
+G.M.B;buys;crop
+harare market;buys;legume
+harare market;buys;vegetable
+agricultural production;generates;crop residue
+livestock;eats;crop residue
+communal farmer;eats;agricultural production
+communal farmer;applies;soil amendment
+soil amendment;includes;manure
+livestock;generates;manure
+soil amendment;includes;termite mound
+soil amendment;includes;organic waste
+communal farmer;generates;organic waste
+soil amendment;fertilises;garden
+soil amendment;fertilises;homefield
